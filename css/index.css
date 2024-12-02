@@ -1,0 +1,142 @@
+/* ------------- formatação do home ------------- */
+#home {
+    background-color: #FFF;
+}
+
+#home section {
+    padding: 0 2em;
+}
+
+#home img {
+    width: 200px;
+}
+
+#home strong {
+    font-size: 18px;
+}
+
+
+/* ------------- formatação dos temas abordados ------------- */
+#conteudo {
+    background-color: #93b8ff;
+}
+
+#temas-abordados section {
+    /* formatar cada tópico dentro dos temas abordados */
+    width: 300px;
+    padding: 3em 3em;
+    box-sizing: border-box;
+}
+
+#temas-abordados img {
+    width: 150px;
+    transition: transform 0.2s;
+}
+  
+#temas-abordados img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+/* ------------- formatação de perguntas frequentes ------------- */
+#perguntas {
+    background-color: #fff;
+}
+
+#faq {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: white;
+
+}
+
+details {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+summary {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    /* arrendonda os cantos do conteudo */
+    cursor: help;
+    /* muda o tipo do cursor ao passar por cima do conteudo */
+}
+
+summary:hover {
+    background-color: #bbb;
+    transition: all 0.5s ease;
+}
+
+details p {
+    padding: 10px;
+}
+
+
+
+
+/* ------------- formatação de notícias ------------- */
+#noticias {
+    background-color: #d6d6d6;
+}
+
+#news section {
+    /* formatar cada tópico dentro das "noticias" */
+    width: 400px;
+    padding: 2em 2em;
+    
+}
+
+#noticias img {
+    width: 400px;
+    height: 240px;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+
+.carousel-container {
+    z-index: 5;
+    overflow: hidden;
+    position: relative; 
+}
+
+.news-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.news-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.prev,
+.next {
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    top: 50%;
+    transition: 0.2s;
+}
+
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

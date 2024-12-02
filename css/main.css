@@ -1,0 +1,298 @@
+/* ------------- fomatações gerais do site ------------- */
+
+body {
+    background-color: #18213f;
+    color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    /* define a largura do body */
+    margin: 0 auto;
+    /* centralizando o body horizontalmente */
+    padding: 0;
+    font-size: 16px;
+    position: static;
+    /* posiciona os elementos na ordem normal da página web*/
+}
+
+p,
+article {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+    /* tira formatações automáticas da âncora */
+    text-decoration: none;
+    color: #000;
+}
+
+.width {
+    /* define o tamanho padrão da página para o conteúdo especificado */
+    width: 70%;
+}
+
+.margin {
+    /* define a margem padrão da página para o conteúdo especificado */
+    margin: 0 auto;
+}
+
+.display-align {
+    /* centraliza o conteúdo e exibe um ao lado do outro */
+    display: flex;
+    align-items: center;
+}
+
+.display-inline-block {
+    /* exibe o conteúdo na mesma linha como um bloco */
+    display: inline-block;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.justify-content {
+    /* distribui espaço igualmente entre os itens */
+    justify-content: space-between;
+}
+
+.center {
+    text-align: center;
+}
+
+.espaco-top-bottom {
+    padding-top: 1em;
+    padding-bottom: 5em;
+}
+
+.grid {
+	max-width: 1600px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	gap: 10px;
+}
+
+.grid2 {
+	max-width: 1600px;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+    align-items: center;
+	gap: 10px;
+}
+
+
+
+
+/* ------------- formatação da main/corpo ------------- */
+main {
+    /* formatar o conteudo pra default */
+    margin-top: -20px;
+    /* colar o conteúdo principal no header */
+    background-color: #FFF;
+    color: #000;
+}
+
+main h2 {
+    padding: 1em 6em;
+}
+
+
+
+
+/* ------------- formatar o header ------------- */
+header {
+    position: relative;
+    /*  altera a posição padrão de um elemento */
+    background-color: #11225a;
+    font-size: 1.5em;
+    /* em: unidade relativa de medida */
+    font-weight: bold;
+    padding: 0.5em;
+    border-bottom: 5px solid #c2c2c2;
+}
+
+nav a:hover {
+    color: #ddd;
+    border-bottom: 2px solid #ddd;
+    transition: all 0.1s ease;
+}
+
+/* formatar o titulo do cabeçalho */
+header a img {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+/* ------------- formatar a barra de navegação ------------- */
+nav a {
+    /* formatar o elemento clicável da barra de navegação */
+    color: #2e80cc;
+    font-size: 80%;
+}
+
+ul {
+    /* formatar todas as listas nao ordenadas */
+    list-style: none;
+    /* remove o estilo da lista (a bolinha) */
+}
+
+nav a img {
+    /* formatar o elemento de darkmode */
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.submenu {
+    display: none; 
+    font-size: 0.8em;
+    position: absolute;
+    padding: 5px 10px;
+    z-index: 1;
+    background-color: #ffffff;
+    /*background-color: #152a6d;
+    border: 3px solid #11225a;*/
+    box-shadow: 3px 2px 5px #000;
+    align-items: self-end;
+}
+
+/* exibe o submenu quando o menu-item é "hovered" */
+.menu-item:hover .submenu {
+    display: grid;
+}
+
+
+/* ------------- formatar o rodape ------------- */
+footer {
+    background-color: #1f1f1f;
+    padding: 20px 0;
+    border-top: 5px solid #a8a8a8;
+}
+
+#form-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.formulario {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* faz com que os itens fiquem em novas linhas em telas menores, tornando o layout responsivo.*/
+    justify-content: space-between;
+    gap: 10px;
+    /* define o espaçamento entre os itens do conteiner*/
+}
+
+.formulario label {
+    flex: 1 1 100px;
+    /* garante que cada label ocupe o espaço adequado sem quebrar */
+    text-align: right;
+}
+
+.formulario input {
+    flex: 1 1 200px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.formulario input::placeholder {
+    /* faz que o texto de dentro do input mude de cor */
+    color: #aaa;
+}
+
+.formulario button {
+    padding: 10px 20px;
+    background-color: #4c82af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    flex-basis: 100%;
+    /* faz o botão ocupar 100% da largura */
+    margin-top: 10px;
+}
+
+.formulario button:hover {
+    background-color: #3b6588;
+}
+
+
+/* responsividade */
+@media (max-width: 1200px){
+	ul {
+		padding: 30px 20px;
+	}
+
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 990px){
+	ul {
+		padding: 20px;
+	}
+}
+
+@media (max-width: 800px){
+	.grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+    .grid2 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }    
+
+    /* formulario */
+    .contact-form input,
+    .contact-form label {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 480px){
+	.grid {
+	grid-template-columns: 1fr;
+	}
+}
+
+
+
+/*
+
+propriedades do position: https://www.freecodecamp.org/portuguese/news/como-usar-a-propriedade-position-do-css-para-alinhar-elementos/#:~:text=Como%20usar%20a%20propriedade%20position%20do%20CSS%20para,normal%20do%20documento.%20...%205%205.%20Sticky%20
+
+propriedades do display:
+https://maujor.com/tutorial/propriedade-css-display.php#:~:text=A%20propriedade%20display%20permite%20que%20voc%C3%AA%20defina%20a,maneira%20como%20determinado%20elemento%20HTML%20deve%20ser%20renderizado.
+
+propriedades do margin:
+http://www.clem.ufba.br/tuts/css/c08.htm
+
+como centralizar um item com margin:
+https://www.freecodecamp.org/portuguese/news/como-centralizar-uma-imagem-na-vertical-e-na-horizontal-com-css/
+
+tags mais utilizadas em html:
+https://www.homehost.com.br/blog/tutoriais/tags-html/
+
+dominando o grid layout:
+https://www.hashtagtreinamentos.com/grid-layout-css-html-e-css
+
+noções essenciais para um layout flexível com o flexbox:
+https://www.hashtagtreinamentos.com/flexbox-css-html-e-css
+
+responsividade css:
+https://www.hashtagtreinamentos.com/responsividade-no-css-htmlcss
+
+como utilizar as media queries(responsividade):
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+
+*/
+

@@ -1,0 +1,144 @@
+/* ---------------------- formatação geral da página de conteúdo ----------------------- */
+
+.introdution {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.introdution img {
+    width: 400px;
+}
+
+.corpo-default {
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+    justify-content: space-between;
+}
+
+.container {
+    display: grid;
+    background-color: #fff;
+    padding: 50px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.container img {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container h4 {
+    color: #2c3e50;
+}
+
+.container ul {
+    list-style: disc;
+}
+
+.article-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.article-title-img {
+    display: block;  /* centraliza a imagem como um bloco */
+    margin: 10px auto; /* centraliza a imagem e adiciona margem inferior */
+    border-radius: 5px;
+    max-width: 100%; /* garante que a imagem não exceda a largura do contêiner */
+    padding: 25px;
+}
+
+#conteudo-5 img {
+    width: 400px;
+}
+
+#conteudo-5 .article-title-img {
+    width: 400px;
+}
+
+#conteudo-7 img {
+    width: 400px;
+}
+
+#conteudo-7 .article-title-img {
+    width: 400px;
+}
+
+/* https://www.alura.com.br/artigos/css-grid-guia-propriedades-grid-container-grid-item */
+
+
+
+
+/* ----------------- formatação para a área de perguntas ----------------- */
+.quiz {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #165ebb;
+    padding: 20px;
+    margin-top: 40px;
+    z-index: 5;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #c4e4ff;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question p {
+    font-weight: bold;
+}
+
+.question label {
+    color: #FFF;
+    display: block;
+    margin: 5px 0;
+}
+
+
+
+/* responsividade */
+@media (max-width: 1200px){
+	ul {
+		padding: 30px 20px;
+	}
+
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 990px){
+	ul {
+		padding: 20px;
+	}
+}
+
+@media (max-width: 800px){
+	.grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+    .article-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* formulario */
+    .contact-form input,
+    .contact-form label {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 480px){
+	.grid {
+	grid-template-columns: 1fr;
+	}
+}
