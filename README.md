@@ -109,7 +109,7 @@ Se encontrar algum problema ou tiver dúvidas, por favor, abra uma *issue* neste
 ---
 
 ## 🔵 Licença
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
+Este projeto está licenciado sob a [Licença MIT](LICENSE.txt).
 
 ---
 
